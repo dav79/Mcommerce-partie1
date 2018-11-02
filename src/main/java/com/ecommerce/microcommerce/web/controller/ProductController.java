@@ -74,6 +74,7 @@ public class ProductController {
         if (productAdded == null)
             return ResponseEntity.noContent().build();
 
+
         URI location = ServletUriComponentsBuilder
                 .fromCurrentRequest()
                 .path("/{id}")
@@ -101,6 +102,13 @@ public class ProductController {
     public List<Product>  testeDeRequetes(@PathVariable int prix) {
 
         return productDao.chercherUnProduitCher(400);
+    }
+
+    @ApiOperation(value = "Calculer la marge de vente d'un produit")
+    @GetMapping(value="/AdminProduits")
+    public List<Product> calculerMargeProduit(){
+
+        return productDao.margeVente();
     }
 
 
