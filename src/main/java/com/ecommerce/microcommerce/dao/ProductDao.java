@@ -26,5 +26,6 @@ public interface ProductDao extends JpaRepository<Product, Integer> {
     @Query("SELECT p.id, p.nom, p.prix, (p.prix - p.prixAchat) as Marge_vente FROM Product p")
     List<Product> margeVente();
 
-
+    //Trier les produits par ordre alphabétique
+    List<Product> findAllByOrderByNomAsc();
 }

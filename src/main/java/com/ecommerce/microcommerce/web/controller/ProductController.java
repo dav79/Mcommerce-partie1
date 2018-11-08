@@ -111,6 +111,10 @@ public class ProductController {
         return productDao.margeVente();
     }
 
-
+    @ApiOperation(value = "Trier la liste des produits par ordre croissant")
+    @GetMapping(value="/Produits/trieCroissant")
+    public List<Product> trieProduitParOrdreAlphabetique(){
+        return productDao.findAllByOrderByNomAsc();
+    }
 
 }
