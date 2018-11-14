@@ -1,0 +1,183 @@
+{
+	"id": "11930196-e7cc-47b6-aaab-9b5b95e5b5c7",
+	"name": "TestsProduits",
+	"allTests": [],
+	"timestamp": "2018-11-14T00:45:10.319Z",
+	"collection_id": "e4fa00e4-67e6-4b7c-9ca4-74b35309453e",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "0",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "e4fa00e4-67e6-4b7c-9ca4-74b35309453e",
+		"name": "TestsProduits",
+		"description": "Plan de test sur les produits pour tester :  \n- le calcul de la marge d'une produit \n- la vérification sur le prix de vente >= 1\n- le trie croissants sur l'ensemble des produits\n",
+		"auth": null,
+		"events": [
+			{
+				"listen": "prerequest",
+				"script": {
+					"id": "3631d9dc-9a9c-47a6-bd30-64c31fac903c",
+					"type": "text/javascript",
+					"exec": [
+						""
+					]
+				}
+			},
+			{
+				"listen": "test",
+				"script": {
+					"id": "0d269fe4-c92d-462a-b1c1-99e53836fba1",
+					"type": "text/javascript",
+					"exec": [
+						""
+					]
+				}
+			}
+		],
+		"variables": [],
+		"order": [
+			"69f350b7-1574-41bb-860a-752cf06f9350",
+			"1d2ea720-dcfc-4817-b68b-df12ce29f359",
+			"c4596777-c29a-4021-b6fd-ec63e9cec0d1"
+		],
+		"folders_order": [],
+		"owner": "4242913",
+		"permissions": {},
+		"favorite": true,
+		"shared": false,
+		"type": "collection",
+		"depth": 0
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [],
+	"results": [
+		{
+			"name": "calculer-marge-produits",
+			"id": "69f350b7-1574-41bb-860a-752cf06f9350",
+			"url": "http://localhost:9090/AdminProduits",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {},
+			"times": [
+				"55"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "55",
+			"totalRequestTime": "55",
+			"iterationResults": {}
+		},
+		{
+			"name": "prix-vente-gratuit-exception",
+			"id": "1d2ea720-dcfc-4817-b68b-df12ce29f359",
+			"url": "http://localhost:9090/Produits",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"testPassFailCounts": {},
+			"times": [
+				"138"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "138",
+			"totalRequestTime": "138",
+			"iterationResults": {}
+		},
+		{
+			"name": "trie-croissant-list-produits-bis",
+			"id": "c4596777-c29a-4021-b6fd-ec63e9cec0d1",
+			"url": "http://localhost:9090/Produits/trieCroissant",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {},
+			"times": [
+				"38"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "38",
+			"totalRequestTime": "38",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 0,
+	"totalFail": 0,
+	"totalTime": 231,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "calculer-marge-produits",
+			"id": "69f350b7-1574-41bb-860a-752cf06f9350",
+			"url": "http://localhost:9090/AdminProduits",
+			"time": "2018-11-14T00:45:10.319Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "prix-vente-gratuit-exception",
+			"id": "1d2ea720-dcfc-4817-b68b-df12ce29f359",
+			"url": "http://localhost:9090/Produits",
+			"time": "2018-11-14T00:45:10.319Z",
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "trie-croissant-list-produits-bis",
+			"id": "c4596777-c29a-4021-b6fd-ec63e9cec0d1",
+			"url": "http://localhost:9090/Produits/trieCroissant",
+			"time": "2018-11-14T00:45:10.319Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		}
+	],
+	"synced": false
+}
